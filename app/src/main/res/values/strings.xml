@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Landmark Remark</string>
+    <string name="notes_action_search">Search notes</string>
+    <string name="notes_search_hint">Username or note\'s content</string>
+    <string name="notes_permission_require">You need to accept location permissions to use this app.</string>
+    <string name="notes_location_current_title">You are here!</string>
+    <string name="notes_only_my_notes">Only My Notes</string>
+    <string name="notes_add_notes_title">create note for current location</string>
+    <string name="notes_invalid_location_title">Location Unavailable</string>
+    <string name="notes_invalid_location_msg">Unable to find valid location</string>
+    <string name="create_note_ok_button">Ok</string>
+    <string name="create_note_create">Create</string>
+    <string name="create_note_discard">Discard</string>
+    <string name="landing_username">Username</string>
+    <string name="landing_btn_save_name">Next</string>
+    <string name="landing_valid_username_msg">Please enter a valid username.</string>
+
+</resources>

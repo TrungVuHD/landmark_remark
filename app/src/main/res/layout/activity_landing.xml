@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="landingViewModel"
+            type="com.android.landmarks.presentation.landing.LandingViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark"
+        tools:context=".presentation.landing.LandingActivity">
+
+        <TextView
+            android:id="@+id/landing_tv_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/logo_size_margin"
+            android:layout_marginTop="@dimen/logo_top_margin"
+            android:layout_marginRight="@dimen/logo_size_margin"
+            android:text="@string/app_name"
+            android:textColor="@color/colorHalfWhite"
+            app:drawableTopCompat="@drawable/ic_edit_location_black_24dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/landing_et_user"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/textview_side_margin"
+            android:layout_marginLeft="@dimen/textview_side_margin"
+            android:layout_marginTop="@dimen/logo_size_margin"
+            android:layout_marginEnd="@dimen/textview_side_margin"
+            android:layout_marginRight="@dimen/textview_side_margin"
+            android:layout_marginBottom="@dimen/logo_size_margin"
+            android:background="@drawable/edit_text_style"
+            android:hint="@string/landing_username"
+            android:inputType="textPersonName"
+            android:padding="@dimen/textview_margin"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/landing_tv_icon" />
+
+        <Button
+            android:id="@+id/landing_bt_save"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/textview_side_margin"
+            android:layout_marginLeft="@dimen/textview_side_margin"
+            android:layout_marginTop="@dimen/logo_size_margin"
+            android:layout_marginEnd="@dimen/textview_side_margin"
+            android:layout_marginRight="@dimen/textview_side_margin"
+            android:layout_marginBottom="@dimen/logo_size_margin"
+            android:background="@drawable/button_style"
+            android:text="@string/landing_btn_save_name"
+            android:textColor="@color/colorHalfWhite"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/landing_et_user" />
+
+        <ProgressBar
+            android:id="@+id/landing_progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="@{landingViewModel.isLoading()?View.VISIBLE:View.GONE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
