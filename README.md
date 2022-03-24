@@ -36,6 +36,7 @@ __Implementation__
     
     * Since the solution doesn't consider authentication, it's easy for users to masquerade.
     * A note should store the __userId__ instead of storing the __username__ directly. But that will add more complexity to the development time, so to make it simple, we just store the __username__ directly.
+    * There is not enough UnitTest for the project, but due to the time limitation, we just add some tests for the project. It should include more tests to has a better coverage number, make the code more reliable.
     
 * Timeline (around **19hr** of working + **5hr** of learning and practicing required technology)
     * Clear the requirements - 1hr
